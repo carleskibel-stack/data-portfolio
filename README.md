@@ -25,7 +25,8 @@ Para un sitio sin framework:
 - Build preset: `Custom`
 - App location: `/`
 - API location: dejar vacío
-- Output location: `/`
+- Output location: vacío
+- Skip app build: true
 - Branch: `main`
 - Hosting plan: `Free`
 
