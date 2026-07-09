@@ -1,0 +1,382 @@
+/* Diseño básico y responsive. Puedes cambiar los colores en :root. */
+:root {
+  --background: #f5f7fa;
+  --surface: #ffffff;
+  --surface-dark: #111827;
+  --text: #172033;
+  --muted: #5f6b7a;
+  --border: #dfe5ec;
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --max-width: 1120px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: min(calc(100% - 40px), var(--max-width));
+  margin: 0 auto;
+}
+
+.narrow {
+  max-width: 780px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links a {
+  color: var(--muted);
+}
+
+.hero {
+  min-height: 620px;
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  align-items: center;
+  gap: 64px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.eyebrow,
+.card-label {
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 780px;
+  margin-bottom: 24px;
+  font-size: clamp(2.7rem, 7vw, 5.3rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.hero-text,
+.section-intro {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+.button.primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: white;
+}
+
+.button.primary:hover {
+  background: var(--accent-dark);
+}
+
+.button.secondary {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.summary-card,
+.architecture-card {
+  padding: 34px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 14px 40px rgba(17, 24, 39, 0.08);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.tag-list span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #eef4ff;
+  color: var(--accent-dark);
+  font-size: 0.87rem;
+  font-weight: 700;
+}
+
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.section-heading {
+  margin-bottom: 38px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  min-height: 250px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.project-card.featured {
+  border-color: #9db9ff;
+}
+
+.status {
+  margin-bottom: 26px;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.status.muted {
+  color: var(--muted);
+}
+
+.stack {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.project-detail {
+  background: var(--surface-dark);
+  color: #f7f8fb;
+}
+
+.project-detail .section-intro,
+.project-detail p,
+.project-detail li {
+  color: #cbd5e1;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.detail-grid h3 {
+  margin-top: 30px;
+}
+
+.detail-grid h3:first-child {
+  margin-top: 0;
+}
+
+.result-list {
+  padding-left: 20px;
+}
+
+.architecture-card {
+  background: #1f2937;
+  border-color: #374151;
+  box-shadow: none;
+}
+
+.flow {
+  display: grid;
+  gap: 10px;
+  text-align: center;
+}
+
+.flow div {
+  padding: 13px;
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  background: #111827;
+  font-weight: 700;
+}
+
+.flow span {
+  color: #93c5fd;
+  font-weight: 800;
+}
+
+.evidence {
+  margin-top: 70px;
+}
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.placeholder {
+  min-height: 210px;
+  display: grid;
+  place-content: center;
+  padding: 30px;
+  border: 1px dashed #64748b;
+  border-radius: 12px;
+  background: #1f2937;
+  text-align: center;
+}
+
+.placeholder p {
+  margin-bottom: 0;
+}
+
+.contact-section {
+  background: #eaf0f8;
+}
+
+.site-footer {
+  padding: 28px 0;
+  background: var(--surface);
+  color: var(--muted);
+  text-align: center;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .hero,
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    gap: 36px;
+  }
+
+  .project-grid,
+  .evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(calc(100% - 28px), var(--max-width));
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+
+  .summary-card,
+  .architecture-card,
+  .project-card {
+    padding: 22px;
+  }
+}

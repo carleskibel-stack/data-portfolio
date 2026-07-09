@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de proyectos de análisis de datos, ETL, automatización y visualización.">
+  <title>Carlos | Data & Automation Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand" href="#inicio">Carlos · Data Portfolio</a>
+      <div class="nav-links">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero container">
+      <div>
+        <p class="eyebrow">ANÁLISIS DE DATOS · CLOUD · AUTOMATIZACIÓN</p>
+        <h1>Transformo datos en procesos y decisiones.</h1>
+        <p class="hero-text">
+          Portafolio de proyectos construidos con Python, Power BI, Google Cloud,
+          Azure y herramientas de automatización.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="#proyecto-gcp">Ver proyecto principal</a>
+          <a class="button secondary" href="#proyectos">Explorar proyectos</a>
+        </div>
+      </div>
+
+      <aside class="summary-card">
+        <p class="card-label">ENFOQUE</p>
+        <h2>Data pipelines y automatización</h2>
+        <p>
+          Soluciones reproducibles para recopilar, validar, transformar,
+          almacenar y visualizar datos.
+        </p>
+        <div class="tag-list">
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Power BI</span>
+          <span>Google Cloud</span>
+          <span>Azure</span>
+        </div>
+      </aside>
+    </section>
+
+    <section id="proyectos" class="section container">
+      <div class="section-heading">
+        <p class="eyebrow">PORTAFOLIO</p>
+        <h2>Proyectos seleccionados</h2>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card featured">
+          <p class="status">Proyecto publicado</p>
+          <h3>Pipeline de datos en Google Cloud</h3>
+          <p>
+            Flujo ETL desde un archivo de origen hasta BigQuery y la visualización
+            de indicadores en Looker Studio.
+          </p>
+          <p class="stack">Cloud Storage · Cloud Run · BigQuery · Python · Looker Studio</p>
+          <a href="#proyecto-gcp">Ver caso de estudio →</a>
+        </article>
+
+        <article class="project-card">
+          <p class="status muted">En preparación</p>
+          <h3>Simulación Monte Carlo en Python</h3>
+          <p>
+            Modelo para analizar escenarios de demanda, costos, rendimiento y riesgo.
+          </p>
+          <p class="stack">Python · Pandas · NumPy · Plotly</p>
+        </article>
+
+        <article class="project-card">
+          <p class="status muted">En preparación</p>
+          <h3>Limpieza y transformación de datos</h3>
+          <p>
+            Proceso automatizado de consolidación, validación y clasificación de errores.
+          </p>
+          <p class="stack">Python · Pandas · Pathlib · CSV</p>
+        </article>
+
+        <article class="project-card">
+          <p class="status muted">En preparación</p>
+          <h3>Dashboard gerencial en Power BI</h3>
+          <p>
+            Modelo de datos, indicadores y visualizaciones para apoyar decisiones.
+          </p>
+          <p class="stack">Power BI · Power Query · DAX</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="proyecto-gcp" class="section project-detail">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">CASO DE ESTUDIO 01</p>
+          <h2>Pipeline de datos en Google Cloud</h2>
+          <p class="section-intro">
+            Implementación de un flujo para recibir datos, procesarlos automáticamente,
+            almacenarlos en BigQuery y consumirlos desde un dashboard.
+          </p>
+        </div>
+
+        <div class="detail-grid">
+          <div>
+            <h3>Problema</h3>
+            <p>
+              Los datos se encontraban en archivos separados y requerían procesamiento
+              manual antes de construir los reportes.
+            </p>
+
+            <h3>Solución</h3>
+            <p>
+              Se creó un flujo reproducible en Google Cloud para cargar, transformar y
+              almacenar la información antes de conectarla con Looker Studio.
+            </p>
+
+            <h3>Resultado</h3>
+            <ul class="result-list">
+              <li>Procesamiento automatizado de archivos.</li>
+              <li>Carga estructurada en BigQuery.</li>
+              <li>Vista preparada para consumo analítico.</li>
+              <li>Dashboard conectado al resultado procesado.</li>
+            </ul>
+          </div>
+
+          <div class="architecture-card">
+            <p class="card-label">ARQUITECTURA</p>
+            <div class="flow">
+              <div>Archivo CSV</div>
+              <span>↓</span>
+              <div>Cloud Storage</div>
+              <span>↓</span>
+              <div>Cloud Run + Python</div>
+              <span>↓</span>
+              <div>BigQuery</div>
+              <span>↓</span>
+              <div>Looker Studio</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="evidence">
+          <h3>Evidencia del proyecto</h3>
+          <div class="evidence-grid">
+            <div class="placeholder">
+              <strong>Captura del dashboard</strong>
+              <p>Reemplaza este bloque después con una imagen de tu reporte.</p>
+            </div>
+            <div class="placeholder">
+              <strong>Diagrama o resultado técnico</strong>
+              <p>También puedes colocar una captura de BigQuery o Cloud Run.</p>
+            </div>
+          </div>
+
+          <div class="actions">
+            <!-- Reemplaza TU_USUARIO y TU_REPOSITORIO -->
+            <a class="button primary"
+               href="https://github.com/TU_USUARIO/TU_REPOSITORIO"
+               target="_blank"
+               rel="noopener noreferrer">
+              Ver código en GitHub
+            </a>
+
+            <!-- Reemplaza # por el enlace público del dashboard -->
+            <a class="button secondary" href="#">
+              Abrir dashboard
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="section container narrow">
+      <div class="section-heading">
+        <p class="eyebrow">PERFIL</p>
+        <h2>Sobre mí</h2>
+      </div>
+      <p>
+        Soy analista de datos con experiencia en visualización, automatización y mejora
+        de procesos. Me interesa diseñar soluciones simples, trazables y útiles para el
+        negocio, mientras profundizo en ingeniería de datos y plataformas cloud.
+      </p>
+    </section>
+
+    <section id="contacto" class="section contact-section">
+      <div class="container narrow">
+        <p class="eyebrow">CONTACTO</p>
+        <h2>Conversemos sobre datos y automatización.</h2>
+        <p>
+          Agrega aquí tus enlaces profesionales cuando publiques la primera versión.
+        </p>
+        <div class="actions">
+          <!-- Reemplaza las direcciones -->
+          <a class="button primary" href="mailto:tu-correo@ejemplo.com">Correo</a>
+          <a class="button secondary"
+             href="https://www.linkedin.com/in/TU_USUARIO/"
+             target="_blank"
+             rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Carlos · Data & Automation Portfolio</p>
+    </div>
+  </footer>
+</body>
+</html>
