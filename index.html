@@ -121,16 +121,19 @@
 
             <h3>Solución</h3>
             <p>
-              Se creó un flujo reproducible en Google Cloud para cargar, transformar y
-              almacenar la información antes de conectarla con Looker Studio.
+              Se desarrolló un proceso ETL en Python desplegado en Cloud Run.
+              El archivo se recibe desde Cloud Storage, se transforma, se carga
+              en BigQuery y posteriormente se consume desde Looker Studio.
             </p>
 
             <h3>Resultado</h3>
             <ul class="result-list">
-              <li>Procesamiento automatizado de archivos.</li>
-              <li>Carga estructurada en BigQuery.</li>
-              <li>Vista preparada para consumo analítico.</li>
-              <li>Dashboard conectado al resultado procesado.</li>
+              <li>90 registros procesados correctamente.</li>
+              <li>Archivo transformado almacenado en Cloud Storage.</li>
+              <li>Datos cargados en la tabla fact_ventas_cafe de BigQuery.</li>
+              <li>Vista analítica vw_resumen_ventas creada para reporting.</li>
+              <li>Dashboard conectado con los datos procesados.</li>
+              <li>Proceso desplegado como servicio en Cloud Run.</li>
             </ul>
           </div>
 
@@ -151,35 +154,72 @@
         </div>
 
         <div class="evidence">
-          <h3>Evidencia del proyecto</h3>
-          <div class="evidence-grid">
-            <div class="placeholder">
-              <strong>Captura del dashboard</strong>
-              <p>Reemplaza este bloque después con una imagen de tu reporte.</p>
-            </div>
-            <div class="placeholder">
-              <strong>Diagrama o resultado técnico</strong>
-              <p>También puedes colocar una captura de BigQuery o Cloud Run.</p>
-            </div>
-          </div>
+           <h3>Evidencia del proyecto</h3>
 
-          <div class="actions">
-            <!-- Reemplaza TU_USUARIO y TU_REPOSITORIO -->
-            <a class="button primary"
-               href="https://github.com/TU_USUARIO/TU_REPOSITORIO"
-               target="_blank"
-               rel="noopener noreferrer">
-              Ver código en GitHub
-            </a>
+      <div class="evidence-grid">
 
-            <!-- Reemplaza # por el enlace público del dashboard -->
-            <a class="button secondary" href="#">
-              Abrir dashboard
-            </a>
-          </div>
+        <figure class="project-image">
+          <img
+            src="images/dashboard-looker.png"
+            alt="Dashboard de ventas creado en Looker Studio"
+          >
+          <figcaption>
+            Dashboard final conectado con BigQuery.
+          </figcaption>
+        </figure>
+        
+        <figure class="project-image">
+          <img
+            src="images/bigquery-resultados.png"
+            alt="Resultados del pipeline almacenados en BigQuery"
+          >
+          <figcaption>
+            Tabla y vista analítica generadas en BigQuery.
+          </figcaption>
+        </figure>
+        <figure class="project-image">
+          <img
+            src="images/cloud-run-ejecucion.png"
+            alt="Servicio ETL desplegado en Google Cloud Run"
+          >
+          <figcaption>
+            Servicio de procesamiento desplegado en Cloud Run.
+          </figcaption>
+        </figure>
+      </div>
+      <div class="technology-block">
+        <h3>Tecnologías utilizadas</h3>
+        <div class="tag-list">
+          <span>Python</span>
+          <span>Pandas</span>
+          <span>Cloud Storage</span>
+          <span>Cloud Run</span>
+          <span>BigQuery</span>
+          <span>Looker Studio</span>
+          <span>GitHub</span>
         </div>
       </div>
-    </section>
+      <div class="actions">
+        <a
+          class="button primary"
+          href="https://datastudio.google.com/s/t9YF8DZuTY0"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver dashboard
+        </a>
+        <a
+          class="button secondary"
+          href="ENLACE_DEL_REPOSITORIO"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver código
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section id="sobre-mi" class="section container narrow">
       <div class="section-heading">
